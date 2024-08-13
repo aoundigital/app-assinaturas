@@ -55,6 +55,7 @@
                                         <th>Nome / Email</th>
                                         <th>Valor</th>
                                         <th>Data</th>
+                                        <th>Tipo</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -65,6 +66,7 @@
                                                 <td class="align-middle"><b>{{ $pgto->assinates->nome }}</b> | {{ $pgto->assinates->email }}</td>
                                                 <td class="align-middle text-center">R$ {{ number_format($pgto->valor_pagto, 2, ",", ".") }}</td>
                                                 <td class="align-middle text-center">{{ date('d/m/Y', strtotime($pgto->data_pagto)) }}</td>
+                                                <td class="align-middle text-center">{{ $pgto->tipo_pagto }}</td>
                                             </tr>
                                         @endforeach
                                     @endisset

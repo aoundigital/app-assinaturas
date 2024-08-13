@@ -12,7 +12,8 @@ class Pagamentos extends Model
     protected $fillable = [
         'cliente_id',
         'data_pagto',
-        'valor_pagto'
+        'valor_pagto',
+        'tipo_pagto'
     ];
 
     function assinates()

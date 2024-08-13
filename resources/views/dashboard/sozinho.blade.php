@@ -5,7 +5,7 @@
 @section('content')
     <div class="row mb-2 pt-2">
         <div class="col-sm-6">
-            <h2>Detalhes da Assinatura | {{ $assinatura->nome }}</h2>
+            <h3>Detalhes da Assinatura | {{ $assinatura->empresa }}</h3>
         </div>
         <div class="col-sm-6 mt-2">
             <div class="float-sm-right">
@@ -71,12 +71,14 @@
                     <thead>
                         <th>Data</th>
                         <th>Valor</th>
+                        <th>Tipo</th>
                     </thead>
                     <tbody>
                         @foreach ($assinatura->pagamentos as $pgtos)
                             <tr>
                                 <td>{{ date('d/m/Y', strtotime($pgtos->data_pagto)) }}</td>
                                 <td>R$ {{ number_format($pgtos->valor_pagto, 2, ',', '.') }}</td>
+                                <td>{{ $pgtos->tipo_pagto }}</td>
                             </tr>
                         @endforeach
                         <tr>

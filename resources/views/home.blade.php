@@ -147,8 +147,8 @@
                                         {{-- <th style="width: 20%">Sites</th> --}}
                                         <th>Plano</th>
                                         <th>Condição</th>
-                                        <th>Data</th>
-                                        <th>Último Pgto</th>
+                                        <th>Pagamento</th>
+                                        <th>Tipo</th>
                                         <th>Ferramentas</th>
                                     </tr>
                                 </thead>
@@ -167,10 +167,10 @@
                                                     INATIVO
                                                 @endif
                                             </td>
-                                            <td class="align-middle text-center">{{ date('d/m/Y', strtotime($ass->data_inicio)) }}</td>
                                             @foreach ($ass->pagamentos as $pagt)
                                                 @if ($loop->last)
                                                     <td class="align-middle text-center">{{ date('d/m/Y', strtotime($pagt->data_pagto)) }}</td>
+                                                    <td class="align-middle text-center">{{ $pagt->tipo_pagto }}</td>
                                                 @endif
                                             @endforeach
                                             <td class="project-actions align-middle text-center">

@@ -12,7 +12,7 @@ class AssinaturasController extends Controller
 
     public function index()
     {
-        $assinaturas = Assinaturas::with(['pagamentos', 'ativo'])->where('del', 'nao')->orderBy('data_inicio','DESC')->get();
+        $assinaturas = Assinaturas::with(['pagamentos', 'ativo'])->where('del', 'nao')->orderBy('empresa','DESC')->get();
         $total_pagina = $assinaturas->sum('valor');
         $basico = Assinaturas::where('tipo', 'basico')->where('del', 'nao')->count();
         $regular = Assinaturas::where('tipo', 'regular')->where('del', 'nao')->count();
