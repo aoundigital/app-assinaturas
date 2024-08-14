@@ -23,7 +23,7 @@
                         <div class="col-sm-4">
                             <div class="form-group">
                                 <label for="empresa">Empresa</label>
-                                <input type="text" name="empresa" class="form-control">
+                                <input type="text" name="empresa" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-sm-4">
@@ -36,13 +36,13 @@
 
 
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Data de Início</label>
                                 <input type="date" name="data_inicio" class="form-control" required>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <!-- select -->
                             <div class="form-group">
                                 <label>Escolha um Plano</label>
@@ -56,7 +56,7 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm-3">
                             <div class="form-group">
                                 <label>Valor</label>
                                 <div class="input-group">
@@ -67,6 +67,12 @@
                                     </div>
                                     <input type="double" name="valor" placeholder="999.99" class="form-control" required>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="form-group">
+                                <label for="tipo_pagto">Tipo Pgto</label>
+                                <input type="text" name="tipo_pagto" class="form-control" required>
                             </div>
                         </div>
                     </div>

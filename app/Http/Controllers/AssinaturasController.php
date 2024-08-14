@@ -115,12 +115,13 @@ class AssinaturasController extends Controller
         $ass = Assinaturas::create($request->all());
         Ativo::create([
             'cliente_id' => $ass->id,
-            'ativo' => true
+            'ativo' => true,
         ]);
         Pagamentos::create([
             'cliente_id' => $ass->id,
             'data_pagto'=> $ass->data_inicio,
-            'valor_pagto' => $ass->valor
+            'valor_pagto' => $ass->valor,
+            'tipo_pagto' => $ass->tipo_pagto,
         ]);
         $this->mensagem = 'Assinaturas Criada com Sucesso!';
         return redirect()->route('dashboard')->with('mensagem' , $this->mensagem);

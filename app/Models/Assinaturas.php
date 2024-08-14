@@ -17,6 +17,7 @@ class Assinaturas extends Model
         'tipo',
         'data_inicio',
         'valor',
+        'tipo_pagto',
         'del'
     ];
 
